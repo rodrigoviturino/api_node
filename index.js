@@ -1,26 +1,19 @@
 // importando o modulo do 'express''
 const express = require("express");
+const consign = require("consign");
+const bodyParser = require("body-parser");
+
 let app = express();
 
-app.get("/", (req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/html");
-  res.end("<h1>Hello World!</h1>");
-});
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  })
+);
+app.use(bodyParser.json());
 
-app.get("/users", (req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "application/json");
-  res.json({
-    users: [
-      {
-        name: "Rodrigo",
-        email: "viturino_souza@outlook.com",
-        id: 1,
-      },
-    ],
-  });
-});
+// estamos passando variavel de acessp APP para todos os arquivos da pasta routers
+consign().include("routers").into(app);
 
 app.listen(3000, "127.0.0.1", () => {
   console.log("servidor rodando");
