@@ -1,3 +1,8 @@
+# Modulos para ser instalados antes de utilizar o repo
+
+- comandos via terminal
+  - npm install
+
 # Modulos Dependentes
 
 - Express
