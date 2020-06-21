@@ -1,7 +1,12 @@
 # Modulos para ser instalados antes de utilizar o repo
 
 - comandos via terminal
+
   - npm install
+
+  * Em seguida rodar o comando
+
+  - nodemon index.js
 
 # Modulos Dependentes
 
