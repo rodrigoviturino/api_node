@@ -4,7 +4,7 @@
 
   - npm install
 
-  * Em seguida rodar o comando
+* Em seguida rodar o comando
 
   - nodemon index.js
 
