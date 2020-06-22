@@ -11,8 +11,9 @@ app.use(
 );
 app.use(bodyParser.json());
 
-// estamos passando variavel de acessp APP para todos os arquivos da pasta routers
-consign().include("routers").into(app);
+// CONSIGN pega todos os arquivos da pasta que estamos selecionando e já faz o module.exports desses arquivos
+// Chamando rotas do sistema
+consign().include("routes").include("utils").into(app);
 
 app.listen(3000, "127.0.0.1", () => {
   console.log("servidor rodando");
