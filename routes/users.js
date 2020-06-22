@@ -65,11 +65,11 @@ module.exports = (app) => {
 
   // Removendo Dado
   routeId.delete((req, res) => {
-    db.remove({ _id: req.params.id }, req.body, (err) => {
+    db.remove({ _id: req.params.id }, {}, (err) => {
       if (err) {
         app.utils.error.send(err, req, res);
       } else {
-        res.status(200).json(req.body);
+        res.status(200).json(req.params);
       }
     });
   });
