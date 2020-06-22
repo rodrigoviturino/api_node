@@ -10,7 +10,10 @@
   "author": "Rodrigo Viturino",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
   },
   "dependencies": {
     "nodemon": "^2.0.4",
